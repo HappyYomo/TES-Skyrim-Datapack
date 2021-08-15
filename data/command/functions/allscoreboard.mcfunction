@@ -12,6 +12,7 @@ scoreboard objectives add defense0 dummy
 scoreboard objectives add defense1 dummy
 scoreboard objectives add defense2 dummy
 scoreboard objectives add defense3 dummy
+scoreboard objectives add defense4 dummy
 scoreboard objectives add sharpness dummy
 scoreboard objectives add enemy_health dummy
 scoreboard objectives add player_health dummy
@@ -63,9 +64,13 @@ scoreboard objectives add enemy_skill_5 dummy
 scoreboard objectives add protection dummy
 scoreboard objectives add Protection dummy
 scoreboard objectives add ID dummy
-scoreboard objectives add SP_health dummy
-scoreboard objectives add SP_majicka dummy
-scoreboard objectives add SP_stamina dummy
+
+scoreboard objectives add SP.Health dummy
+scoreboard objectives add SP.Majicka dummy
+scoreboard objectives add SP.Stamina dummy
+#For Weapon Charge Speed
+scoreboard objectives add Weapon.Charge dummy
+scoreboard objectives add Weapon.Charge.D dummy
 scoreboard objectives add Settings trigger
 scoreboard players enable @a Settings
 
