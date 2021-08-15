@@ -1,6 +1,6 @@
-execute as @a[nbt={SelectedItem:{id:"minecraft:wooden_sword",tag:{Damage:0}}}] at @s run item replace entity @s weapon.mainhand with wooden_sword{ATK:3,Damage:1,Unbreakable:1}
-execute as @a[nbt={SelectedItem:{id:"minecraft:stone_sword",tag:{Damage:0}}}] at @s run item replace entity @s weapon.mainhand with stone_sword{ATK:5,Damage:131,Unbreakable:1}
-execute as @a[nbt={SelectedItem:{id:"minecraft:iron_sword",tag:{Damage:0}}}] at @s run item replace entity @s weapon.mainhand with iron_sword{ATK:7,Damage:1,Unbreakable:1}
-execute as @a[nbt={SelectedItem:{id:"minecraft:golden_sword",tag:{Damage:0}}}] at @s run item replace entity @s weapon.mainhand with golden_sword{ATK:10,Damage:1,Unbreakable:1,display:{Name:'{"text":"Dwarven Sword","itaric":"true"}'}}
-execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_sword",tag:{Damage:0}}}] at @s run item replace entity @s weapon.mainhand with diamond_sword{ATK:12,Damage:1,Unbreakable:1,display:{Name:'{"text":"Glass Sword","itaric":"true"}'}}
-execute as @a[nbt={SelectedItem:{id:"minecraft:netherite_sword",tag:{Damage:0}}}] at @s run item replace entity @s weapon.mainhand with netherite_sword{ATK:13,Damage:1,Unbreakable:1,display:{Name:'{"text":"Ebony Sword","itaric":"true"}'}}
+execute as @a[nbt={SelectedItem:{id:"minecraft:wooden_sword",tag:{Damage:0}}}] run item replace entity @s weapon.mainhand with wooden_sword{ATK:3,Damage:1,Unbreakable:1}
+execute as @a[nbt={SelectedItem:{id:"minecraft:stone_sword",tag:{Damage:0}}}] run item replace entity @s weapon.mainhand with stone_sword{ATK:5,Damage:131,Unbreakable:1}
+execute as @a[nbt={SelectedItem:{id:"minecraft:iron_sword",tag:{Damage:0}}}] run item replace entity @s weapon.mainhand with iron_sword{ATK:7,Damage:1,Unbreakable:1}
+execute as @a[nbt={SelectedItem:{id:"minecraft:golden_sword",tag:{Damage:0}}}] run item replace entity @s weapon.mainhand with golden_sword{ATK:10,Damage:1,Unbreakable:1,display:{Name:'{"text":"Dwarven Sword","itaric":"true"}'}}
+execute as @a[nbt={SelectedItem:{id:"minecraft:diamond_sword",tag:{Damage:0}}}] run item replace entity @s weapon.mainhand with diamond_sword{ATK:12,Damage:1,Unbreakable:1,display:{Name:'{"text":"Glass Sword","itaric":"true"}'}}
+execute as @a[nbt={SelectedItem:{id:"minecraft:netherite_sword",tag:{Damage:0}}}] run item replace entity @s weapon.mainhand with netherite_sword{ATK:13,Damage:1,Unbreakable:1,display:{Name:'{"text":"Ebony Sword","itaric":"true"}'}}
