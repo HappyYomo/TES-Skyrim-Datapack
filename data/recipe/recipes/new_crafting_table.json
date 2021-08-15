@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iii",
+        "ICH",
+        "ZZZ"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "I": {
+            "item": "minecraft:iron_pickaxe"
+        },
+        "C": {
+            "item": "minecraft:crafting_table"
+        },
+        "H": {
+            "item": "minecraft:iron_axe"
+        },
+        "Z": {
+            "item": "minecraft:redstone_block"
+        }
+    },
+    "result": {
+        "item": "minecraft:jigsaw",
+        "count": 1
+    }
+}

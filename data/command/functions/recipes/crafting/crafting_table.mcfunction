@@ -1,0 +1,4 @@
+execute as @e[tag=crafting] at @s if block ~ ~ ~ air at @e[type=item,nbt={Item:{id:"minecraft:dropper"}},sort=nearest,distance=..1,limit=1] run give @p endermite_spawn_egg{display:{Name:'{"text":"作業台","color":"blue","bold":true,"italic":false,"underlined":true}',Lore:['{"text":"置きたい場所においてください"}']},EntityTag:{id:"minecraft:armor_stand",NoGravity:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,Tags:["crafting"]},Crafting:1b} 1
+execute as @e[tag=crafting] at @s if block ~ ~ ~ air at @e[type=item,nbt={Item:{id:"minecraft:dropper"}},sort=nearest,distance=..1,limit=1] run kill @s
+execute as @e[type=item,nbt={Item:{id:"minecraft:dropper",tag:{display:{Name:'{"text":"作業台","color":"blue","italic":"false","bold":"true"}'}}}}] at @s run kill @s
+execute as @e[tag=crafting] at @s run fill ~ ~ ~ ~ ~ ~ dropper[facing=up]{CustomName:'{"text":"作業台","color":"blue","bold":true,"italic":false}'} replace air

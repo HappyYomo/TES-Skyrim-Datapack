@@ -1,0 +1,6 @@
+execute as @a at @s if entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots",tag:{Damage:0}}]}] run item replace entity @s armor.feet with leather_boots{HP:1b,Armor:1b,Defense:15,Damage:1,Unbreakable:1b,HideFlags:7}
+execute as @a at @s if entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:chainmail_boots",tag:{Damage:0}}]}] run item replace entity @s armor.feet with chainmail_boots{HP:1b,Armor:1b,Defense:20,Damage:1,Unbreakable:1b,HideFlags:7}
+execute as @a at @s if entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:iron_boots",tag:{Damage:0}}]}] run item replace entity @s armor.feet with iron_boots{HP:1b,Armor:1b,Defense:30,Damage:1,Unbreakable:1b,HideFlags:7}
+execute as @a at @s if entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:golden_boots",tag:{Damage:0}}]}] run item replace entity @s armor.feet with golden_boots{HP:1b,Armor:1b,Defense:40,Damage:1,Unbreakable:1b,HideFlags:7}
+execute as @a at @s if entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:diamond_boots",tag:{Damage:0}}]}] run item replace entity @s armor.feet with diamond_boots{HP:1b,Armor:1b,Defense:50,Damage:1,Unbreakable:1b,HideFlags:7}
+execute as @a at @s if entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:netherite_boots",tag:{Damage:0}}]}] run item replace entity @s armor.feet with netherite_boots{HP:1b,Armor:1b,Defense:60,Damage:1,Unbreakable:1b,HideFlags:7}

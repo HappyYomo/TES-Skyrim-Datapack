@@ -1,0 +1,2 @@
+execute as @a[nbt={Inventory:[{id:"minecraft:jigsaw"}]}] at @s run give @p endermite_spawn_egg{display:{Name:'{"text":"作業台","color":"blue","bold":true,"italic":false,"underlined":true}',Lore:['{"text":"置きたい場所においてください"}']},EntityTag:{id:"minecraft:armor_stand",NoGravity:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,Tags:["crafting"]}} 1
+execute as @a[nbt={Inventory:[{id:"minecraft:jigsaw"}]}] at @s run clear @s minecraft:jigsaw 1
