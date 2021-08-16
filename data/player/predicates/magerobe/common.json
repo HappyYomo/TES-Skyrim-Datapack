@@ -1,0 +1,46 @@
+[
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "head": {
+                    "nbt": "{CommonMage:1b}"
+                }
+            }
+        }
+    },
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "chest": {
+                    "nbt": "{CommonMage:1b}"
+                }
+            }
+        }
+    },
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "legs": {
+                    "nbt": "{CommonMage:1b}"
+                }
+            }
+        }
+    },
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "feet": {
+                    "nbt": "{CommonMage:1b}"
+                }
+            }
+        }
+    }
+]
