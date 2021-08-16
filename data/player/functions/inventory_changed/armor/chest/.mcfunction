@@ -7,3 +7,6 @@
 # 体力増加
 	execute if data storage tesv_whole: InventoryCopy[{Slot:102b}].tag.Health store result score $Amount Temporary run data get storage tesv_whole: InventoryCopy[{Slot:102b}].tag.Health
 	execute unless score @s Health.Chest = $Amount Temporary run function player:inventory_changed/armor/chest/health
+# 防御力増加
+	execute if data storage tesv_whole: InventoryCopy[{Slot:102b}].tag.Defense store result score $Amount Temporary run data get storage tesv_whole: InventoryCopy[{Slot:102b}].tag.Defense
+	execute unless score @s Defense.Chest = $Amount Temporary run function player:inventory_changed/armor/chest/defense
