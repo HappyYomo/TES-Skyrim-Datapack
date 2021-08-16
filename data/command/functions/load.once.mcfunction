@@ -14,15 +14,22 @@
 	## プレイヤーの行動
 		scoreboard objectives add PlayTime minecraft.custom:minecraft.play_time
 	## ステータス
-		scoreboard objectives add Health dummy
-		scoreboard objectives add Health.Max dummy
-		scoreboard objectives add Health.Recov.Dur dummy
-		scoreboard objectives add Health.Recov.Tmr dummy
-		scoreboard objectives add Health.Recov.Per dummy
-		scoreboard objectives add Health.Head dummy
-		scoreboard objectives add Health.Chest dummy
-		scoreboard objectives add Health.Legs dummy
-		scoreboard objectives add Health.Feet dummy
+		### 体力
+			scoreboard objectives add Health dummy
+			scoreboard objectives add Health.Max dummy
+			scoreboard objectives add Health.Recov.Dur dummy
+			scoreboard objectives add Health.Recov.Tmr dummy
+			scoreboard objectives add Health.Recov.Per dummy
+			scoreboard objectives add Health.Head dummy
+			scoreboard objectives add Health.Chest dummy
+			scoreboard objectives add Health.Legs dummy
+			scoreboard objectives add Health.Feet dummy
+		### 防御力
+			scoreboard objectives add Defense dummy
+			scoreboard objectives add Defense.Head dummy
+			scoreboard objectives add Defense.Chest dummy
+			scoreboard objectives add Defense.Legs dummy
+			scoreboard objectives add Defense.Feet dummy
 # 
 	scoreboard objectives add gun minecraft.used:minecraft.carrot_on_a_stick
 	scoreboard objectives add time minecraft.used:minecraft.carrot_on_a_stick
@@ -30,11 +37,6 @@
 	scoreboard objectives add click minecraft.used:minecraft.warped_fungus_on_a_stick
 	scoreboard objectives add magic_damage dummy
 	scoreboard objectives add mana_damage dummy
-	scoreboard objectives add defense dummy
-	scoreboard objectives add defense0 dummy
-	scoreboard objectives add defense1 dummy
-	scoreboard objectives add defense2 dummy
-	scoreboard objectives add defense3 dummy
 	scoreboard objectives add health_n dummy
 	scoreboard objectives add health_o dummy
 	scoreboard objectives add Health4 dummy
