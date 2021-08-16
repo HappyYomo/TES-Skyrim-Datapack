@@ -1,5 +1,4 @@
 #システム1
-function command:systems/health/health
 function command:systems/defense/defense
 function command:systems/health/taken
 function command:systems/mp/mp
