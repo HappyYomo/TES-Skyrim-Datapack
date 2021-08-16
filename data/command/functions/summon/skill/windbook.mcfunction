@@ -1,4 +1,4 @@
-execute as @e[tag=enemy] at @s if entity @s[nbt={HandItems:[{},{tag:{EnemyWindBook:1b}}]}] run tag @s add enemy_skill_5
+execute as @e[tag=Entity] at @s if entity @s[nbt={HandItems:[{},{tag:{EnemyWindBook:1b}}]}] run tag @s add enemy_skill_5
 execute as @e[tag=enemy_skill_5] at @s at @a[distance=..10] run scoreboard players add @s enemy_skill_5 1
 execute at @a as @e[tag=enemy_skill_5,scores={enemy_skill_5=25},distance=..4] at @s run summon armor_stand ~ ~ ~ {Tags:["EnemyWind","delete"],Invisible:1,NoGravity:1,Marker:1}
 execute at @a as @e[tag=enemy_skill_5,scores={enemy_skill_5=25},distance=..4] at @s run tp @e[tag=EnemyWind,distance=..1,sort=nearest,limit=1] ^ ^ ^-0.01 facing entity @s

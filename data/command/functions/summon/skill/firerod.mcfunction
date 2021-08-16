@@ -1,4 +1,4 @@
-execute as @e[tag=enemy] at @s if entity @s[nbt={HandItems:[{tag:{EnemyFireRod:1b}},{}]}] run tag @s add enemy_skill_0
+execute as @e[tag=Entity] at @s if entity @s[nbt={HandItems:[{tag:{EnemyFireRod:1b}},{}]}] run tag @s add enemy_skill_0
 execute as @e[tag=enemy_skill_0] at @s at @a[distance=..10] run scoreboard players add @s enemy_skill_0 1
 execute at @a as @e[tag=enemy_skill_0,scores={enemy_skill_0=50},distance=..10] at @s run summon armor_stand ~ ~ ~ {Tags:["EnemyFireball","delete"],Invisible:1,NoGravity:1,Marker:1}
 execute at @a as @e[tag=enemy_skill_0,scores={enemy_skill_0=50},distance=..10] at @s run tp @e[tag=EnemyFireball,distance=..1,sort=nearest,limit=1] ^ ^ ^-0.01 facing entity @s

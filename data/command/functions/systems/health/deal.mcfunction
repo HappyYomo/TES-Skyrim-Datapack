@@ -9,8 +9,8 @@ execute as @a[tag=Weapon.Charge] if data entity @s SelectedItem if score @s atta
 execute as @a if data entity @s SelectedItem.tag.MageBeam if score @s attack matches 1.. run function command:systems/health/deal/deal
 
 #Get health less than based health
-execute as @e[tag=enemy] at @s at @a[distance=..6,scores={attack=1..}] store result score @s Health5 run data get entity @s Health
-execute as @e[tag=enemy] at @s at @a[distance=..6,scores={attack=1..}] run scoreboard players operation @s Health4 -= @s Health5
+execute as @e[tag=Entity] at @s at @a[distance=..6,scores={attack=1..}] store result score @s Health5 run data get entity @s Health
+execute as @e[tag=Entity] at @s at @a[distance=..6,scores={attack=1..}] run scoreboard players operation @s Health4 -= @s Health5
 execute as @a if entity @s[nbt={SelectedItem:{tag:{MageBeam:1b}}}] if score @s attack matches 1.. run scoreboard players reset @s attack
 
 #Put ATK damage into ArmorStand
@@ -24,26 +24,26 @@ execute as @a[tag=Weapon.Charge] if entity @s[tag=ShowDealt] if data entity @s S
 execute as @a[tag=Weapon.Charge] if entity @s[tag=ShowDealt] if data entity @s SelectedItem if score @s attack matches 1.. run scoreboard players reset @s ATK
 
 execute as @e[tag=attack] at @s run tp @s ^ ^ ^1
-execute as @e[tag=attack] at @s run scoreboard players operation @e[tag=enemy,scores={Health4=1..},distance=..2,sort=nearest,limit=1] health -= @s ATK
-execute as @e[tag=attack] at @s at @e[tag=enemy,scores={Health4=1..},distance=..2,sort=nearest,limit=1] run kill @s
+execute as @e[tag=attack] at @s run scoreboard players operation @e[tag=Entity,scores={Health4=1..},distance=..2,sort=nearest,limit=1] health -= @s ATK
+execute as @e[tag=attack] at @s at @e[tag=Entity,scores={Health4=1..},distance=..2,sort=nearest,limit=1] run kill @s
 execute as @e[tag=attack] at @s run tp @s ^ ^ ^1
-execute as @e[tag=attack] at @s run scoreboard players operation @e[tag=enemy,scores={Health4=1..},distance=..2,sort=nearest,limit=1] health -= @s ATK
-execute as @e[tag=attack] at @s at @e[tag=enemy,scores={Health4=1..},distance=..2,sort=nearest,limit=1] run kill @s
+execute as @e[tag=attack] at @s run scoreboard players operation @e[tag=Entity,scores={Health4=1..},distance=..2,sort=nearest,limit=1] health -= @s ATK
+execute as @e[tag=attack] at @s at @e[tag=Entity,scores={Health4=1..},distance=..2,sort=nearest,limit=1] run kill @s
 execute as @e[tag=attack] at @s run tp @s ^ ^ ^1
-execute as @e[tag=attack] at @s run scoreboard players operation @e[tag=enemy,scores={Health4=1..},distance=..2,sort=nearest,limit=1] health -= @s ATK
-execute as @e[tag=attack] at @s at @e[tag=enemy,scores={Health4=1..},distance=..2,sort=nearest,limit=1] run kill @s
+execute as @e[tag=attack] at @s run scoreboard players operation @e[tag=Entity,scores={Health4=1..},distance=..2,sort=nearest,limit=1] health -= @s ATK
+execute as @e[tag=attack] at @s at @e[tag=Entity,scores={Health4=1..},distance=..2,sort=nearest,limit=1] run kill @s
 execute as @e[tag=attack] at @s run tp @s ^ ^ ^1
-execute as @e[tag=attack] at @s run scoreboard players operation @e[tag=enemy,scores={Health4=1..},distance=..2,sort=nearest,limit=1] health -= @s ATK
-execute as @e[tag=attack] at @s at @e[tag=enemy,scores={Health4=1..},distance=..2,sort=nearest,limit=1] run kill @s
+execute as @e[tag=attack] at @s run scoreboard players operation @e[tag=Entity,scores={Health4=1..},distance=..2,sort=nearest,limit=1] health -= @s ATK
+execute as @e[tag=attack] at @s at @e[tag=Entity,scores={Health4=1..},distance=..2,sort=nearest,limit=1] run kill @s
 execute as @e[tag=attack] at @s run tp @s ^ ^ ^1
-execute as @e[tag=attack] at @s run scoreboard players operation @e[tag=enemy,scores={Health4=1..},distance=..2,sort=nearest,limit=1] health -= @s ATK
-execute as @e[tag=attack] at @s at @e[tag=enemy,scores={Health4=1..},distance=..2,sort=nearest,limit=1] run kill @s
+execute as @e[tag=attack] at @s run scoreboard players operation @e[tag=Entity,scores={Health4=1..},distance=..2,sort=nearest,limit=1] health -= @s ATK
+execute as @e[tag=attack] at @s at @e[tag=Entity,scores={Health4=1..},distance=..2,sort=nearest,limit=1] run kill @s
 execute as @e[tag=attack] at @s run tp @s ^ ^ ^1
-execute as @e[tag=attack] at @s run scoreboard players operation @e[tag=enemy,scores={Health4=1..},distance=..2,sort=nearest,limit=1] health -= @s ATK
-execute as @e[tag=attack] at @s at @e[tag=enemy,scores={Health4=1..},distance=..2,sort=nearest,limit=1] run kill @s
+execute as @e[tag=attack] at @s run scoreboard players operation @e[tag=Entity,scores={Health4=1..},distance=..2,sort=nearest,limit=1] health -= @s ATK
+execute as @e[tag=attack] at @s at @e[tag=Entity,scores={Health4=1..},distance=..2,sort=nearest,limit=1] run kill @s
 execute as @a at @s run scoreboard players reset @s attack
 execute as @e[tag=attack] at @s run kill @s
-execute as @e[tag=enemy] at @s at @a[distance=..6] store result score @s Health4 run data get entity @s Health
-execute as @e[tag=enemy] at @s run data merge entity @s {Health:20f}
+execute as @e[tag=Entity] at @s at @a[distance=..6] store result score @s Health4 run data get entity @s Health
+execute as @e[tag=Entity] at @s run data merge entity @s {Health:20f}
 execute as @a[tag=Weapon.Charge] run scoreboard players reset @s Weapon.Charge
 execute as @a[tag=Weapon.Charge] run tag @s remove Weapon.Charge
