@@ -1,0 +1,46 @@
+[
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "head": {
+                    "nbt": "{OverLordMage:1b}"
+                }
+            }
+        }
+    },
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "chest": {
+                    "nbt": "{OverLordMage:1b}"
+                }
+            }
+        }
+    },
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "legs": {
+                    "nbt": "{OverLordMage:1b}"
+                }
+            }
+        }
+    },
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "feet": {
+                    "nbt": "{OverLordMage:1b}"
+                }
+            }
+        }
+    }
+]

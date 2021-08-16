@@ -1,0 +1,46 @@
+[
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "head": {
+                    "nbt": "{SkilledMage:1b}"
+                }
+            }
+        }
+    },
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "chest": {
+                    "nbt": "{SkilledMage:1b}"
+                }
+            }
+        }
+    },
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "legs": {
+                    "nbt": "{SkilledMage:1b}"
+                }
+            }
+        }
+    },
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "equipment": {
+                "feet": {
+                    "nbt": "{SkilledMage:1b}"
+                }
+            }
+        }
+    }
+]
