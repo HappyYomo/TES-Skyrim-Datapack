@@ -1,6 +1,6 @@
 #体力
 execute as @e[tag=enemy] run scoreboard players add @s enemy_health 1
-execute as @e[tag=enemy] if score @s enemy_health matches 1 store result score @s health run data get entity @s Health 10
+execute as @e[tag=enemy] if score @s enemy_health matches 1 store result score @s health run data get entity @s Health 5
 execute as @e[tag=enemy] if data entity @s ArmorItems[3].tag.EHP if score @s enemy_health matches 1 store result score @s health run data get entity @s ArmorItems[3].tag.Health
 execute as @e[tag=enemy] at @s if score @s health matches ..0 run summon chest_minecart ~ ~ ~ {Tags:["belonging"],Invulnerable:1,NoAI:1}
 execute as @e[tag=enemy] at @s if score @s health matches ..0 run data modify storage minecraft:belonging ArmorItems set from entity @s ArmorItems
@@ -17,7 +17,7 @@ execute as @e[tag=enemy] at @s if score @s health matches ..0 run kill @s
 
 #システム1
 execute as @a run scoreboard players add @s player_health 1
-execute as @a if score @s player_health matches 1 run scoreboard players set @s health 200
+execute as @a if score @s player_health matches 1 run scoreboard players set @s health 100
 
 execute as @a unless entity @s[nbt={Inventory:[{Slot:103b,tag:{HP:1b}}]}] run scoreboard players set @s Health3 0
 execute as @a unless entity @s[nbt={Inventory:[{Slot:102b,tag:{HP:1b}}]}] run scoreboard players set @s Health2 0

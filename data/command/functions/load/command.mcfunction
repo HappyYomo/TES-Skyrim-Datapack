@@ -5,10 +5,7 @@ function command:systems/load
 function command:armours/load
 
 #魔法
-function command:magics/load
-
-#銃
-function command:guns/load
+#function command:magics/load
 
 #レシピ
 function command:recipes/load
