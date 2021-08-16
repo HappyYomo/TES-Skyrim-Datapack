@@ -9,6 +9,21 @@
 # 
 #> Scoreboard
 #@public
+	scoreboard objectives add Temporary dummy
+	scoreboard objectives add Constant dummy
+	## プレイヤーの行動
+		scoreboard objectives add PlayTime minecraft.custom:minecraft.play_time
+	## ステータス
+		scoreboard objectives add Health dummy
+		scoreboard objectives add Health.Max dummy
+		scoreboard objectives add Health.Recov.Dur dummy
+		scoreboard objectives add Health.Recov.Tmr dummy
+		scoreboard objectives add Health.Recov.Per dummy
+		scoreboard objectives add Health.Head dummy
+		scoreboard objectives add Health.Chest dummy
+		scoreboard objectives add Health.Legs dummy
+		scoreboard objectives add Health.Feet dummy
+# 
 	scoreboard objectives add gun minecraft.used:minecraft.carrot_on_a_stick
 	scoreboard objectives add time minecraft.used:minecraft.carrot_on_a_stick
 	scoreboard objectives add death dummy
@@ -20,29 +35,12 @@
 	scoreboard objectives add defense1 dummy
 	scoreboard objectives add defense2 dummy
 	scoreboard objectives add defense3 dummy
-	scoreboard objectives add sharpness dummy
-	scoreboard objectives add enemy_health dummy
-	scoreboard objectives add player_health dummy
-	scoreboard objectives add HEALTH dummy
-	scoreboard objectives add Health dummy
-	scoreboard objectives add health dummy
 	scoreboard objectives add health_n dummy
 	scoreboard objectives add health_o dummy
-	scoreboard objectives add healthA dummy
-	scoreboard objectives add healthB dummy
-	scoreboard objectives add health0 dummy
-	scoreboard objectives add health1 dummy
-	scoreboard objectives add health2 dummy
-	scoreboard objectives add health3 dummy
-	scoreboard objectives add Health0 dummy
-	scoreboard objectives add Health1 dummy
-	scoreboard objectives add Health2 dummy
-	scoreboard objectives add Health3 dummy
 	scoreboard objectives add Health4 dummy
 	scoreboard objectives add Health5 dummy
 	scoreboard objectives add death_times deathCount
 	scoreboard objectives add damage_taken minecraft.custom:minecraft.damage_taken
-	scoreboard objectives add Constant dummy
 	scoreboard objectives add ATK dummy
 	scoreboard objectives add attack minecraft.custom:minecraft.damage_dealt
 	scoreboard objectives add attack_n minecraft.custom:minecraft.damage_dealt
@@ -78,6 +76,10 @@
 # ScoreHolder
 	scoreboard players set $100 Constant 100
 	scoreboard players set $ID ID 1
+# 
+#> Tag
+#@public
+ #declare tag Entity
 # 
 #> ScoreHolder
 #@public
