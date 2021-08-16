@@ -1,5 +1,4 @@
 #システム1
-function command:systems/enemy
 function command:systems/enchanting/enchanting
 function command:systems/health/health
 function command:systems/defense/defense

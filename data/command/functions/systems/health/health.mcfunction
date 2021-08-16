@@ -1,19 +1,19 @@
 #体力
-execute as @e[tag=enemy] run scoreboard players add @s enemy_health 1
-execute as @e[tag=enemy] if score @s enemy_health matches 1 store result score @s health run data get entity @s Health 5
-execute as @e[tag=enemy] if data entity @s ArmorItems[3].tag.EHP if score @s enemy_health matches 1 store result score @s health run data get entity @s ArmorItems[3].tag.Health
-execute as @e[tag=enemy] at @s if score @s health matches ..0 run summon chest_minecart ~ ~ ~ {Tags:["belonging"],Invulnerable:1,NoAI:1}
-execute as @e[tag=enemy] at @s if score @s health matches ..0 run data modify storage minecraft:belonging ArmorItems set from entity @s ArmorItems
-execute as @e[tag=enemy] at @s if score @s health matches ..0 run data modify storage minecraft:belonging HandItems set from entity @s HandItems
+execute as @e[tag=Entity] run scoreboard players add @s enemy_health 1
+execute as @e[tag=Entity] if score @s enemy_health matches 1 store result score @s health run data get entity @s Health 5
+execute as @e[tag=Entity] if data entity @s ArmorItems[3].tag.EHP if score @s enemy_health matches 1 store result score @s health run data get entity @s ArmorItems[3].tag.Health
+execute as @e[tag=Entity] at @s if score @s health matches ..0 run summon chest_minecart ~ ~ ~ {Tags:["belonging"],Invulnerable:1,NoAI:1}
+#execute as @e[tag=Entity] at @s if score @s health matches ..0 run data modify storage minecraft:belonging ArmorItems set from entity @s ArmorItems
+#execute as @e[tag=Entity] at @s if score @s health matches ..0 run data modify storage minecraft:belonging HandItems set from entity @s HandItems
 data modify storage minecraft:belonging ArmorItems[0].Slot set value 0b
 data modify storage minecraft:belonging ArmorItems[1].Slot set value 1b
 data modify storage minecraft:belonging ArmorItems[2].Slot set value 2b
 data modify storage minecraft:belonging ArmorItems[3].Slot set value 3b
 data modify storage minecraft:belonging HandItems[0].Slot set value 4b
 data modify storage minecraft:belonging HandItems[1].Slot set value 5b
-execute as @e[tag=enemy] at @s if score @s health matches ..0 run data modify entity @e[tag=belonging,sort=nearest,limit=1] Items append from storage minecraft:belonging ArmorItems[{}]
-execute as @e[tag=enemy] at @s if score @s health matches ..0 run data modify entity @e[tag=belonging,sort=nearest,limit=1] Items append from storage minecraft:belonging HandItems[{}]
-execute as @e[tag=enemy] at @s if score @s health matches ..0 run kill @s
+execute as @e[tag=Entity] at @s if score @s health matches ..0 run data modify entity @e[tag=belonging,sort=nearest,limit=1] Items append from storage minecraft:belonging ArmorItems[{}]
+execute as @e[tag=Entity] at @s if score @s health matches ..0 run data modify entity @e[tag=belonging,sort=nearest,limit=1] Items append from storage minecraft:belonging HandItems[{}]
+execute as @e[tag=Entity] at @s if score @s health matches ..0 run kill @s
 
 #システム1
 execute as @a run scoreboard players add @s player_health 1
@@ -46,5 +46,5 @@ execute as @a if score @s health matches ..0 run kill @s
 execute as @a if score @s health matches ..0 store result score @s health run scoreboard players get @s HEALTH
 
 #システム5
-execute as @e[tag=belonging] at @s unless entity @e[tag=enemy,distance=..15] run scoreboard players add @s death 1
-execute as @e[tag=belonging] at @s if score @s death matches 600.. unless entity @e[tag=enemy,distance=..15] run kill @s
+execute as @e[tag=belonging] at @s unless entity @e[tag=Entity,distance=..15] run scoreboard players add @s death 1
+execute as @e[tag=belonging] at @s if score @s death matches 600.. unless entity @e[tag=Entity,distance=..15] run kill @s
