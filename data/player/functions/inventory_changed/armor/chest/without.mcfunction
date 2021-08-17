@@ -4,6 +4,9 @@
 #
 # @within function player:inventory_changed/
 
-# 体力を減らす
-	execute if entity @s[scores={Health.Chest=..2147483647}] run scoreboard players operation @s Health -= @s Health.Chest
-	execute if entity @s[scores={Health.Chest=..2147483647}] run scoreboard players reset @s Health.Chest
+# 減少
+	execute if entity @s[scores={Health.Chest=..2147483647}] run function player:inventory_changed/armor/chest/health/remove
+	execute if entity @s[scores={Majika.Chest=..2147483647}] run function player:inventory_changed/armor/chest/majika/remove
+	execute if entity @s[scores={Defense.Chest=..2147483647}] run function player:inventory_changed/armor/chest/defense/remove
+# Tagを外す
+	tag @s remove Wearing.Chest
