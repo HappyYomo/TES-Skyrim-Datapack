@@ -13,6 +13,8 @@
 	scoreboard players operation @s Health += $Health.Max.Copy Temporary
 # 過剰に回復したら
 	execute if score @s Health > @s Health.Max run scoreboard players operation @s Health = @s Health.Max
+# タイマーをリセット
+	scoreboard players reset @s Health.Recov.Tmr
 # 一時使用ScoreHolderをリセット
 	scoreboard players reset $Health.Max.Copy
 # 
