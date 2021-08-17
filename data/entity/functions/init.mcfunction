@@ -86,6 +86,7 @@
 #@private
 #@within advancement player:*
 #@within function player:entity_hurt_player/filters/*
+#@within function player:player_hurt_entity/filters/*
  #declare tag FindFlag0.0
  #declare tag FindFlag0.1
  #declare tag FindFlag1.0

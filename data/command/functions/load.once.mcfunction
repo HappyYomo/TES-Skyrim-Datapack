@@ -25,32 +25,37 @@
 			scoreboard objectives add Health.Chest dummy
 			scoreboard objectives add Health.Legs dummy
 			scoreboard objectives add Health.Feet dummy
+		### マジカ
+			scoreboard objectives add Majika dummy
+			scoreboard objectives add Majika.Max dummy
+			scoreboard objectives add Majika.Recov.Dur dummy
+			scoreboard objectives add Majika.Recov.Tmr dummy
+			scoreboard objectives add Majika.Recov.Per dummy
+			scoreboard objectives add Majika.Head dummy
+			scoreboard objectives add Majika.Chest dummy
+			scoreboard objectives add Majika.Legs dummy
+			scoreboard objectives add Majika.Feet dummy
 		### 攻撃力
 			scoreboard objectives add Attack dummy
+			scoreboard objectives add Weapon.Charge dummy
 		### 防御力
 			scoreboard objectives add Defense dummy
 			scoreboard objectives add Defense.Head dummy
 			scoreboard objectives add Defense.Chest dummy
 			scoreboard objectives add Defense.Legs dummy
 			scoreboard objectives add Defense.Feet dummy
+	## その他
+		scoreboard objectives add Mage dummy
+		scoreboard objectives add Death dummy
 # 
 	scoreboard objectives add gun minecraft.used:minecraft.carrot_on_a_stick
 	scoreboard objectives add time minecraft.used:minecraft.carrot_on_a_stick
 	scoreboard objectives add click minecraft.used:minecraft.warped_fungus_on_a_stick
 	scoreboard objectives add magic_damage dummy
 	scoreboard objectives add mana_damage dummy
-	scoreboard objectives add Health4 dummy
-	scoreboard objectives add Health5 dummy
-	scoreboard objectives add death_times deathCount
-	scoreboard objectives add attack minecraft.custom:minecraft.damage_dealt
-	scoreboard objectives add attack_n minecraft.custom:minecraft.damage_dealt
-	scoreboard objectives add mp dummy
-	scoreboard objectives add MP dummy
 	scoreboard objectives add MP1 dummy
 	scoreboard objectives add MP2 dummy
-	scoreboard objectives add MP3 dummy
 	scoreboard objectives add MP4 dummy
-	scoreboard objectives add MP5 dummy
 	scoreboard objectives add MP6 dummy
 	scoreboard objectives add player dummy
 	scoreboard objectives add player1 dummy

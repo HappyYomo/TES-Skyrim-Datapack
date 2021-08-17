@@ -9,5 +9,8 @@
 		execute store result score @s Health.Max run scoreboard players set @s Health 100
 		scoreboard players set @s Health.Recov.Dur 100
 		scoreboard players set @s Health.Recov.Per 5
+	# 攻撃力
+		scoreboard players set @s Attack 1
+		scoreboard players set @s Weapon.Charge 0
 	## 防御力
 		scoreboard players set @s Defense 0
