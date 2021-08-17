@@ -25,6 +25,8 @@
 			scoreboard objectives add Health.Chest dummy
 			scoreboard objectives add Health.Legs dummy
 			scoreboard objectives add Health.Feet dummy
+			scoreboard objectives add Health.Mainhand dummy
+			scoreboard objectives add Health.Offhand dummy
 		### マジカ
 			scoreboard objectives add Majika dummy
 			scoreboard objectives add Majika.Max dummy
@@ -35,8 +37,12 @@
 			scoreboard objectives add Majika.Chest dummy
 			scoreboard objectives add Majika.Legs dummy
 			scoreboard objectives add Majika.Feet dummy
+			scoreboard objectives add Majika.Mainhand dummy
+			scoreboard objectives add Majika.Offhand dummy
 		### 攻撃力
 			scoreboard objectives add Attack dummy
+			scoreboard objectives add Attack.Mainhand dummy
+			scoreboard objectives add Attack.Offhand dummy
 			scoreboard objectives add Weapon.Charge dummy
 		### 防御力
 			scoreboard objectives add Defense dummy
@@ -53,18 +59,6 @@
 	scoreboard objectives add click minecraft.used:minecraft.warped_fungus_on_a_stick
 	scoreboard objectives add magic_damage dummy
 	scoreboard objectives add mana_damage dummy
-	scoreboard objectives add MP1 dummy
-	scoreboard objectives add MP2 dummy
-	scoreboard objectives add MP4 dummy
-	scoreboard objectives add MP6 dummy
-	scoreboard objectives add player dummy
-	scoreboard objectives add player1 dummy
-	scoreboard objectives add Player1 dummy
-	scoreboard objectives add player2 dummy
-	scoreboard objectives add player3 dummy
-	scoreboard objectives add player4 dummy
-	scoreboard objectives add player5 dummy
-	scoreboard objectives add player_time dummy
 	scoreboard objectives add enemy_skill_0 dummy
 	scoreboard objectives add enemy_skill_1 dummy
 	scoreboard objectives add enemy_skill_2 dummy

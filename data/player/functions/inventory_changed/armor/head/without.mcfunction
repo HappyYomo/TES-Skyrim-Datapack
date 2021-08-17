@@ -4,6 +4,9 @@
 #
 # @within function player:inventory_changed/
 
-# 体力を減らす
-	execute if entity @s[scores={Health.Head=..2147483647}] run scoreboard players operation @s Health -= @s Health.Head
-	execute if entity @s[scores={Health.Head=..2147483647}] run scoreboard players reset @s Health.Head
+# 減少
+	execute if entity @s[scores={Health.Head=..2147483647}] run function player:inventory_changed/armor/head/health/remove
+	execute if entity @s[scores={Majika.Head=..2147483647}] run function player:inventory_changed/armor/head/majika/remove
+	execute if entity @s[scores={Defense.Head=..2147483647}] run function player:inventory_changed/armor/head/defense/remove
+# Tagを外す
+	tag @s remove Wearing.Head
