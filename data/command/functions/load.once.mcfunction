@@ -52,6 +52,7 @@
 			scoreboard objectives add Defense.Feet dummy
 	## その他
 		scoreboard objectives add Death dummy
+		scoreboard objectives add ID dummy
 # 
 	scoreboard objectives add gun minecraft.used:minecraft.carrot_on_a_stick
 	scoreboard objectives add time minecraft.used:minecraft.carrot_on_a_stick
@@ -66,7 +67,6 @@
 	scoreboard objectives add enemy_skill_5 dummy
 	scoreboard objectives add protection dummy
 	scoreboard objectives add Protection dummy
-	scoreboard objectives add ID dummy
 	scoreboard objectives add SP_health dummy
 	scoreboard objectives add SP_majicka dummy
 	scoreboard objectives add SP_stamina dummy
@@ -76,7 +76,6 @@
 	scoreboard players set $100 Constant 100
 	scoreboard players set $2^15 Constant 32768
 	scoreboard players set $2^16 Constant 65536
-	#scoreboard players set $ID ID 1
 # 
 #> Tag
 #@public
@@ -89,7 +88,6 @@
  #declare score_holder $100
  #declare score_holder $2^15
  #declare score_holder $2^16
- #declare score_holder $ID
 # 
 #> Storage
 #@public
