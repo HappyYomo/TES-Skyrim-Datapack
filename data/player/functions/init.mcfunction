@@ -18,3 +18,9 @@
 		scoreboard players set @s Weapon.Charge 0
 	## 防御力
 		scoreboard players set @s Defense 0
+# ID
+	execute store result score @s ID run scoreboard players add $ID.Index Global 1
+# 
+#> ScoreHolder
+#@private
+ #declare score_holder $ID.Index
