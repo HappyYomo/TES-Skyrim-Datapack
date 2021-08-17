@@ -1,5 +1,4 @@
 #システム1
-function command:armours/magerobe
 function command:systems/id
 
 #システム3

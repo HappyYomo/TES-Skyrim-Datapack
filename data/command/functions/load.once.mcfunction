@@ -51,7 +51,6 @@
 			scoreboard objectives add Defense.Legs dummy
 			scoreboard objectives add Defense.Feet dummy
 	## その他
-		scoreboard objectives add Mage dummy
 		scoreboard objectives add Death dummy
 # 
 	scoreboard objectives add gun minecraft.used:minecraft.carrot_on_a_stick

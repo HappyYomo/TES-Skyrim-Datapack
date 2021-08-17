@@ -1,3 +1,0 @@
-execute as @a[nbt={Inventory:[{Slot:100b,tag:{CommonMage:1b}},{Slot:101b,tag:{CommonMage:1b}},{Slot:102b,tag:{CommonMage:1b}},{Slot:103b,tag:{CommonMage:1b}}]}] at @s run scoreboard players set @s MP3 8
-execute as @a[nbt={Inventory:[{Slot:100b,tag:{SkilledMage:1b}},{Slot:101b,tag:{SkilledMage:1b}},{Slot:102b,tag:{SkilledMage:1b}},{Slot:103b,tag:{SkilledMage:1b}}]}] at @s run scoreboard players set @s MP3 6
-execute as @a[nbt={Inventory:[{Slot:100b,tag:{OverLordMage:1b}},{Slot:101b,tag:{OverLordMage:1b}},{Slot:102b,tag:{OverLordMage:1b}},{Slot:103b,tag:{OverLordMage:1b}}]}] at @s run scoreboard players set @s MP3 2
