@@ -14,6 +14,8 @@
 	scoreboard objectives add Constant dummy
 	## プレイヤーの行動
 		scoreboard objectives add PlayTime minecraft.custom:minecraft.play_time
+		scoreboard objectives add Used.EndermiteSE minecraft.used:minecraft.endermite_spawn_egg
+		scoreboard objectives add Mined.Dropper minecraft.mined:minecraft.dropper
 	## ステータス
 		### 体力
 			scoreboard objectives add Health dummy
@@ -65,8 +67,6 @@
 	scoreboard objectives add enemy_skill_3 dummy
 	scoreboard objectives add enemy_skill_4 dummy
 	scoreboard objectives add enemy_skill_5 dummy
-	scoreboard objectives add protection dummy
-	scoreboard objectives add Protection dummy
 	scoreboard objectives add SP_health dummy
 	scoreboard objectives add SP_majicka dummy
 	scoreboard objectives add SP_stamina dummy
@@ -81,6 +81,8 @@
 #@public
  #declare tag Entity
  #declare tag This
+ #declare tag Crafting
+ #declare tag New.Marker
 # 
 #> ScoreHolder
 #@public
