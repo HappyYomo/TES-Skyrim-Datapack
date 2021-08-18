@@ -5,7 +5,7 @@ Anyone wanna create a datapack together?
 
 # デバッグメッセージ
 ・アイテム
-	防具には「Armor:1b」を、武器には「Weapon:1b」を付ける 
+	防具には「Armor:1b」を、武器には「Weapon:1b」を付ける  
 	防具には"Health,Majika,Defense"のタグが、武器には"Health,Majika,Attack"のタグが付けられる
 
 	give @s minecraft:leather_boots{
