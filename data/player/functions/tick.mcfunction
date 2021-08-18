@@ -21,3 +21,9 @@
 		execute if entity @s[tag=Having.Offhand] unless data entity @s Inventory[{Slot:-106b}].tag.Weapon run function player:weapons/offhand/without
 # ウエポンチャージ
 	execute if entity @s[scores={Weapon.Charge=1..}] run scoreboard players remove @s Weapon.Charge 1
+# 作業台を渡す
+	execute if data entity @s Inventory[{id:"minecraft:jigsaw"}] run function crafting:give
+# エンダーマイトのスポーンエッグを使ったら
+		execute if entity @s[scores={Used.EndermiteSE=1..}] run scoreboard players reset @s Used.EndermiteSE
+# ドロッパーを壊したら
+		execute if entity @s[scores={Mined.Dropper=1..}] run scoreboard players reset @s Mined.Dropper
