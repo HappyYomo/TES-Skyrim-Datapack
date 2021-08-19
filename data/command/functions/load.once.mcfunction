@@ -15,7 +15,6 @@
 	## プレイヤーの行動
 		scoreboard objectives add PlayTime minecraft.custom:minecraft.play_time
 		scoreboard objectives add Used.EndermiteSE minecraft.used:minecraft.endermite_spawn_egg
-		scoreboard objectives add Mined.Dropper minecraft.mined:minecraft.dropper
 	## ステータス
 		### 体力
 			scoreboard objectives add Health dummy

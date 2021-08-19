@@ -25,5 +25,3 @@
 	execute if data entity @s Inventory[{id:"minecraft:jigsaw"}] run function crafting:give
 # エンダーマイトのスポーンエッグを使ったら
 		execute if entity @s[scores={Used.EndermiteSE=1..}] run scoreboard players reset @s Used.EndermiteSE
-# ドロッパーを壊したら
-		execute if entity @s[scores={Mined.Dropper=1..}] run scoreboard players reset @s Mined.Dropper
