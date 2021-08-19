@@ -2,7 +2,10 @@
 We're creating Skyrim Datapack  
 We will release before Tes VI appears We gonna upload this datapack  
 Anyone wanna create a datapack together?  
-
+  
+# 
+[赤石愛](https://twitter.com/AiAkaishi)様の[Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat)を使わせていただいております。  
+  
 # デバッグメッセージ
 ・アイテム  
 	防具には「Armor:1b」を、武器には「Weapon:1b」を付ける  
