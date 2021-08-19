@@ -1,6 +1,5 @@
 {
   "values": [
-    "command:load/command",
     "command:tick"
   ]
 }

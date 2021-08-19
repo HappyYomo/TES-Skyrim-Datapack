@@ -60,12 +60,6 @@
 	scoreboard objectives add click minecraft.used:minecraft.warped_fungus_on_a_stick
 	scoreboard objectives add magic_damage dummy
 	scoreboard objectives add mana_damage dummy
-	scoreboard objectives add enemy_skill_0 dummy
-	scoreboard objectives add enemy_skill_1 dummy
-	scoreboard objectives add enemy_skill_2 dummy
-	scoreboard objectives add enemy_skill_3 dummy
-	scoreboard objectives add enemy_skill_4 dummy
-	scoreboard objectives add enemy_skill_5 dummy
 	scoreboard objectives add SP_health dummy
 	scoreboard objectives add SP_majicka dummy
 	scoreboard objectives add SP_stamina dummy
@@ -73,8 +67,15 @@
 # ScoreHolder
 	scoreboard players set $2 Constant 2
 	scoreboard players set $100 Constant 100
+	scoreboard players set $31743 Constant 31743
 	scoreboard players set $2^15 Constant 32768
 	scoreboard players set $2^16 Constant 65536
+# Gamerule
+	gamerule maxCommandChainLength 2147483647
+# Forceload
+	forceload add 512 512
+# 疑似乱数を生成するための初期化
+	schedule function command:random/init 1t
 # 
 #> Tag
 #@public
@@ -87,6 +88,7 @@
 #@public
  #declare score_holder $2
  #declare score_holder $100
+ #declare score_holder $31743
  #declare score_holder $2^15
  #declare score_holder $2^16
 # 

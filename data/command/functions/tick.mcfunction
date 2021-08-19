@@ -5,7 +5,7 @@
 # @within tag/function minecraft:tick
 
 # Entityの初期化
-	execute as @e[type=#entity:living,type=!minecraft:player,tag=!Entity] run function entity:init
+	execute as @e[type=#entity:living,type=!minecraft:player,tag=!Entity] at @s run function entity:init
 # 作業台で常時実行
 	execute as @e[type=minecraft:marker,tag=Crafting] at @s if entity @a[distance=..8] run function crafting:tick
 # プレイヤーで常時実行

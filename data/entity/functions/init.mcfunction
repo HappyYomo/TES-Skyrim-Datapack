@@ -6,72 +6,75 @@
 
 # ステータス
 	## 体力
-		execute unless data entity @s ArmorItems[3].tag.Health store result score @s Health store result score @s Health.Max run data get entity @s Health 5
-		execute if data entity @s ArmorItems[3].tag.Health store result score @s Health store result score @s Health.Max run data get entity @s ArmorItems[3].tag.Health
+		execute if data entity @s ArmorItems[3].tag.Status.Health store result score @s Health store result score @s Health.Max run data get entity @s ArmorItems[3].tag.Status.Health
+		execute unless data entity @s ArmorItems[3].tag.Status.Health store result score @s Health store result score @s Health.Max run data get entity @s Health 5
 	## 攻撃力
-		execute if data entity @s HandItems[0].tag.Attack store result score @s Attack run data get entity @s HandItems[0].tag.Attack
-		execute unless data entity @s HandItems[0].tag.Attack run scoreboard players set @s Attack 1
+		execute if data entity @s HandItems[0].tag.Status.Attack store result score @s Attack run data get entity @s HandItems[0].tag.Status.Attack
+		execute unless data entity @s HandItems[0].tag.Status.Attack run scoreboard players set @s Attack 1
+# アイテムを落とさないようにする
+	data modify entity @s HandDropChances set value [0f,0f]
+	data modify entity @s ArmorDropChances set value [0f,0f,0f,0f]
 
 ### ここから下は「TheSkyBlock」のシステムを使わせてもらっています
 # グローバルインデックス増加
-    scoreboard players add $FlagIndex Global 1
-    scoreboard players operation $FlagIndex Global %= $2^15 Constant
-    execute if score $FlagIndex Global matches 0 run scoreboard players add $FlagIndex Global 1
+	scoreboard players add $FlagIndex Global 1
+	scoreboard players operation $FlagIndex Global %= $2^15 Constant
+	execute if score $FlagIndex Global matches 0 run scoreboard players add $FlagIndex Global 1
 # Clone
-    scoreboard players operation $CloneFlagIndex Temporary = $FlagIndex Global
+	scoreboard players operation $CloneFlagIndex Temporary = $FlagIndex Global
 # FlagIndex << 16
-    scoreboard players operation $CloneFlagIndex Temporary *= $2^16 Constant
+	scoreboard players operation $CloneFlagIndex Temporary *= $2^16 Constant
 # オーバーフローしてたらtag追加
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag0.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag0.1
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag0.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag0.1
 # 0になるまでやる
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag1.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag1.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag2.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag2.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag3.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag3.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag4.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag4.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag5.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag5.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag6.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag6.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag7.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag7.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag8.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag8.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag9.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag9.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag10.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag10.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag11.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag11.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag12.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag12.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag13.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag13.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag14.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag14.1
-    scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
-    execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag15.0
-    execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag15.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag1.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag1.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag2.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag2.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag3.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag3.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag4.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag4.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag5.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag5.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag6.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag6.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag7.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag7.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag8.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag8.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag9.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag9.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag10.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag10.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag11.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag11.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag12.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag12.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag13.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag13.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag14.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag14.1
+	scoreboard players operation $CloneFlagIndex Temporary *= $2 Constant
+	execute if score $CloneFlagIndex Temporary matches 00.. run tag @s add FindFlag15.0
+	execute if score $CloneFlagIndex Temporary matches ..-1 run tag @s add FindFlag15.1
 # リセット
-    scoreboard players reset $CloneFlagIndex Temporary
+	scoreboard players reset $CloneFlagIndex Temporary
 ### 
 
 # 初期化完了
