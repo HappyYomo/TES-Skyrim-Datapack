@@ -15,6 +15,7 @@
 	## プレイヤーの行動
 		scoreboard objectives add PlayTime minecraft.custom:minecraft.play_time
 		scoreboard objectives add Used.EndermiteSE minecraft.used:minecraft.endermite_spawn_egg
+		scoreboard objectives add Open.Enderchest minecraft.custom:minecraft.open_enderchest
 	## ステータス
 		### 体力
 			scoreboard objectives add Health dummy
@@ -51,6 +52,9 @@
 			scoreboard objectives add Defense.Chest dummy
 			scoreboard objectives add Defense.Legs dummy
 			scoreboard objectives add Defense.Feet dummy
+	## スキルツリー
+		scoreboard objectives add SkillItems dummy
+		scoreboard objectives add SkillPage dummy
 	## その他
 		scoreboard objectives add Death dummy
 		scoreboard objectives add ID dummy
@@ -74,6 +78,9 @@
 	gamerule maxCommandChainLength 2147483647
 # Forceload
 	forceload add 512 512
+# シュルカーボックスを設置
+	execute unless block 512 0 512 minecraft:shulker_box run setblock 512 0 512 minecraft:shulker_box
+	execute unless block 512 1 512 minecraft:bedrock run setblock 512 1 512 minecraft:bedrock
 # 疑似乱数を生成するための初期化
 	schedule function command:random/init 1t
 # 
@@ -95,3 +102,8 @@
 #> Storage
 #@public
  #declare storage tesv_whole:
+ #declare storage oh_my_dat:
+# 
+#> ShulkerBox
+#@public
+ #alias vector ShulkerBox 512 0 512

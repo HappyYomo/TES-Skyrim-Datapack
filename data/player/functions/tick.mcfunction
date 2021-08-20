@@ -21,7 +21,13 @@
 		execute if entity @s[tag=Having.Offhand] unless data entity @s Inventory[{Slot:-106b}].tag.Weapon run function player:weapons/offhand/without
 # ウエポンチャージ
 	execute if entity @s[scores={Weapon.Charge=1..}] run scoreboard players remove @s Weapon.Charge 1
+# スキルツリー
+	# エンダーチェストを開いたら
+		execute if entity @s[scores={Open.Enderchest=1..}] run function player:open.enderchest
+	# アイテムが変ったら
+		execute store result score @s SkillItems if data entity @s EnderItems[{tag:{SkillItem:1b}}]
+		execute unless score @s SkillItems matches 27 run function skill_tree:changed
 # 作業台を渡す
 	execute if data entity @s Inventory[{id:"minecraft:jigsaw"}] run function crafting:give
 # エンダーマイトのスポーンエッグを使ったら
-		execute if entity @s[scores={Used.EndermiteSE=1..}] run scoreboard players reset @s Used.EndermiteSE
+	execute if entity @s[scores={Used.EndermiteSE=1..}] run scoreboard players reset @s Used.EndermiteSE
